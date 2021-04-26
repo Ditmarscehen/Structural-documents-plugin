@@ -1,0 +1,27 @@
+{
+  parserClass="org.intellij.sdk.language.parser.PascalParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Pascal"
+  psiImplClassSuffix="Impl"
+  psiPackage="org.intellij.sdk.language.psi"
+  psiImplPackage="org.intellij.sdk.language.psi.impl"
+
+  elementTypeHolderClass="org.intellij.sdk.language.psi.PascalTypes"
+  elementTypeClass="org.intellij.sdk.language.psi.PascalElementType"
+  tokenTypeClass="org.intellij.sdk.language.psi.PascalTokenType"
+}
+
+pascalFile ::= program_declaring variable_declaring program_body
+
+program_declaring ::= PROGRAM WHITE_SPACE PROGRAM_NAME
+variable_declaring ::= (VAR WHITE_SPACE variables COLON TYPE)* SEMICOLON
+variables ::= VARIABLE (VARIABLE COMMA)*
+program_body ::= BEGIN expression* END
+expression ::= (write | read | assignment) SEMICOLON
+write ::= WRITE_KEY OPEN_BRACKET WRITE_DATA CLOSE_BRACKET
+read ::= READ_KEY OPEN_BRACKET VARIABLE CLOSE_BRACKET
+assignment ::= VARIABLE WHITE_SPACE EQUAL WHITE_SPACE (arithmetic_expression | value)
+arithmetic_expression ::= (value BINARY_OPEARTOR value)
+value ::= VARIABLE | NUMBER

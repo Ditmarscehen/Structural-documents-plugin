@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>org.example.Structural-documents-plugin</id>
+    <name>Base Pascal</name>
+    <vendor email="support@yurcompany.com" url="http://www.yurcompany.com">YurCompany</vendor>
+
+    <description><![CDATA[
+    Pseudo Pascal syntax highlighting and coloring
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType name="Pascal File" implementationClass="org.intellij.sdk.language.PascalFileType"
+                  fieldName="INSTANCE" language="Pascal" extensions="pascal"/>
+        <lang.parserDefinition language="Pascal"
+                               implementationClass="org.intellij.sdk.language.PascalParserDefinition"/>
+        <lang.syntaxHighlighterFactory language="Pascal"
+                                       implementationClass="org.intellij.sdk.language.PascalSyntaxHighlighterFactory"/>
+
+
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
