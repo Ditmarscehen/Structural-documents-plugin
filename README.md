@@ -4,3 +4,5 @@ As language seletcted [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming
 * write
 * read
 * variables assigtment with simple arithmetic expressions
+ 
+ [example](https://github.com/Ditmarscehen/Structural-documents-plugin/blob/master/example.pascal)
