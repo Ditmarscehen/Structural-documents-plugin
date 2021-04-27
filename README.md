@@ -1,5 +1,5 @@
 # Structural-documents-plugin
-As language seletcted [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language))  and basic operations implemented including
+As language seletcted [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language)) with basic operations supported.
 * variables definition
 * write
 * read
